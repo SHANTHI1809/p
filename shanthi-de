@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+    stages{
+        stage("checkout"){
+            steps{
+                checkout scm
+
+            }
+    
+        }
+    stage ("deployment"){
+        steps{
+            sh "cp -r /var/lib/jenkins/workspace/project3/ var/www/html/"
+        }
+    }
+    }
+
+}
