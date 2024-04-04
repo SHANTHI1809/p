@@ -1,16 +1,16 @@
 pipeline {
     agent any
-    stages{
-        stage("checkout"){
-            steps{
+    stages {
+        stage("checkout") {
+            steps {
                 checkout scm
 
             }
     
         }
-    stage ("deployment"){
-        steps{
-            sh "cp -r /var/lib/jenkins/workspace/project3/ var/www/html/"
+    stage ("deployment" ){
+        steps {
+            sh "sudo cp -r /var/lib/jenkins/workspace/project3/ var/www/html/"
         }
     }
     }
