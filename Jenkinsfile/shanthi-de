@@ -1,18 +1,1 @@
-pipeline {
-    agent any
-    stages {
-        stage("checkout") {
-            steps {
-                checkout scm
-
-            }
-    
-        }
-    stage ("deployment" ){
-        steps {
-            sh "sudo cp -r /var/lib/jenkins/workspace/project3/ var/www/html/"
-        }
-    }
-    }
-
-}
+20.123.74.216
