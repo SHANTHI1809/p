@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent {lable"shanthi"}
     stages {
         stage("checkout") {
             steps {
@@ -10,7 +10,7 @@ pipeline {
         }
     stage ("deployment" ){
         steps {
-            sh "sudo cp -r /var/lib/jenkins/workspace/project3/* /var/www/html/"
+            sh "sudo cp -r /var/lib/jenkins/workspace/${JOB_NAME}/* /var/www/html/"
         }
     }
     }
