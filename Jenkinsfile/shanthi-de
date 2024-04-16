@@ -1,5 +1,5 @@
 pipeline {
-    agent {lable"shanthi"}
+    agent {lable'shanthi-de'}
     stages {
         stage("checkout") {
             steps {
