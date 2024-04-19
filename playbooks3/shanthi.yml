@@ -1,0 +1,9 @@
+---
+    - name: This is to install sonarscanner
+      hosts: Dev 
+      user: ansible
+      become: yes
+      roles:
+              - name: sonar-scanner
+                vars:
+                      version: "5.0.1.3006"
