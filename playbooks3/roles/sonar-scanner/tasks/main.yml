@@ -1,0 +1,13 @@
+---
+- name: Download and unarchive sonar-scanner
+  ansible.builtin.unarchive:
+         src: "https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-{{version}}-linux.zip"
+         dest: /opt/
+         remote_src: yes
+- name: Renaming the folder
+  shell: mv /opt/sonar-scanner-{{version}}-linux /opt/sonar-scanner/
+
+
+     
+
+
